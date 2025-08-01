@@ -1,32 +1,37 @@
 import { useRef } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-
+import expenseTracker from '../../assets/expense_tracker.png'
+import netflixGpt from '../../assets/netflix_gpt.png'
+import jobPortal from '../../assets/jsp.png'
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Expense Tracker",
+    img: expenseTracker,
+    desc: "A MERN stack web app for tracking income and expenses in real-time, with features for authentication, category-based transaction management, data visualization using Recharts, Excel export, and a responsive user-interface.",
+    link:"https://expensetracker-tau-jet.vercel.app",
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Netflix-GPT",
+    img: netflixGpt,
+    desc: "A movie recommendation web app with a Netflix-style UI, built using React.js and Redux for state management. Integrated Firebase for backend services and hosting, and added GPT-powered search for intelligent movie suggestions.",
+    link:"https://netflix-gpt-7b06d.web.app",
   },
   {
     id: 3,
-    title: "Vanilla JS App",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
-  {
-    id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
+    title: "Job Seeking Portal",
+    img: jobPortal,
+    desc: "A MERN stack job-seeking portal offering personalized job recommendations based on user skills and preferences. Includes REST APIs to support profile creation, job search, and posts about upcoming pool campus drives at nearby colleges.",
+    link:"https://jobzee-delta.vercel.app ",
+  }, 
+  // {
+  //   id: 4,
+  //   title: "Music App",
+  //   img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+  // },
 ];
 
 const Single = ({ item }) => {
@@ -48,7 +53,8 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <button onClick={()=>window.open(item.link, "_blank")}
+            >See Demo</button>
           </motion.div>
         </div>
       </div>

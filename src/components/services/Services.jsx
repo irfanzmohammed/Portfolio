@@ -1,7 +1,14 @@
 import { useRef } from "react";
 import "./services.scss";
 import { motion, useInView } from "framer-motion";
-
+import reactLogo from '../../assets/React.png'
+import nodeLogo from '../../assets/Node.js.png';
+import expressLogo from '../../assets/Express.png';
+import mongodbLogo from '../../assets/MongoDB.png'
+import jsLogo from '../../assets/JavaScript.png';
+import htmlLogo from '../../assets/HTML5.png';
+import cssLogo from '../../assets/CSS3.png';
+import githubLogo from '../../assets/githubLogo.png';
 const variants = {
   initial: {
     x: -500,
@@ -23,6 +30,16 @@ const Services = () => {
   const ref = useRef();
 
   const isInView = useInView(ref, { margin: "-100px" });
+  const techLogos = [
+  { img: reactLogo, label: "React" },
+  { img: nodeLogo, label: "Node.js" },
+  { img: expressLogo, label: "Express.js" },
+  { img: mongodbLogo, label: "Mongo DB" },
+  { img: jsLogo, label: "JavaScript" },
+  { img: htmlLogo, label: "HTML" },
+  { img: cssLogo, label: "CSS" },
+  { img: githubLogo, label: "GitHub" },
+];
 
   return (
     <motion.div
@@ -36,79 +53,24 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> and move forward
+         Tech
+          <br /> Stack
         </p>
         <hr />
       </motion.div>
-      <motion.div className="titleContainer" variants={variants}>
-        <div className="title">
-          <img src="/people.webp" alt="" />
-          <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
-          </h1>
-        </div>
-        <div className="title">
-          <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
-          </h1>
-          <button>WHAT WE DO?</button>
-        </div>
+     <motion.div className="techGrid" variants={variants}>
+        {techLogos.map((tech, index) => (
+          <motion.div key={index} className="techItem" variants={variants}>
+            <img src={tech.img} alt={tech.label} />
+            <span>{tech.label}</span>
+          </motion.div>
+        ))}
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-      </motion.div>
+
+<motion.div className="downloadSection" variants={variants}>
+  <p>Download My Resume</p>
+  <a href="/Resume.pdf" download className="resume-btn">Download</a>
+</motion.div>
     </motion.div>
   );
 };

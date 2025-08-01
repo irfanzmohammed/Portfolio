@@ -3,6 +3,8 @@ import "./navbar.scss";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const githubUrl = import.meta.env.VITE_GITHUB_ID;
+  const linkedinUrl=import.meta.env.VITE_LINKEDIN_ID
   return (
     <div className="navbar">
       {/* Sidebar */}
@@ -13,21 +15,16 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Lama Dev
+          Mohammed Irfan
         </motion.span>
         <div className="social">
-          <a href="#">
-            <img src="/facebook.png" alt="" />
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+            <img src="/githubLogo.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/instagram.png" alt="" />
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+            <img src="/linkedin.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
-          </a>
+          
         </div>
       </div>
     </div>

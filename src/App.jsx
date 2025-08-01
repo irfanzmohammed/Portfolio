@@ -16,22 +16,20 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
-      <section id="Services">
-        <Parallax type="services" />
+      <section id="Tech Stack">
+        <Parallax type="Tech Stack" />
       </section>
       <section>
         <Services />
       </section>
-      <section id="Portfolio">
-        <Parallax type="portfolio" />
+      <section id="Projects">
+        <Parallax type="Projects" />
       </section>
       <Portfolio />
       <section id="Contact">
         <Contact />
       </section>
-      {/* Framer Motion Crash Course */}
-      {/* <Test/>
-    <Test/> */}
+      
     </div>
   );
 };

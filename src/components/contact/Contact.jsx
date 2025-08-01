@@ -26,15 +26,22 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
+  const mailId=import.meta.env.VITE_MAILID
+  const number=import.meta.env.VITE_NUMBER
+
   const sendEmail = (e) => {
     e.preventDefault();
+    
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        serviceID, 
+        templateID,
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+         publicKey
       )
       .then(
         (result) => {
@@ -45,6 +52,8 @@ const Contact = () => {
         }
       );
   };
+
+  
 
   return (
     <motion.div
@@ -58,15 +67,15 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>{mailId}</span>
         </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
+        {/* <motion.div className="item" variants={variants}>
+          <h2>Github</h2>
           <span>Hello street New York</span>
-        </motion.div>
+        </motion.div> */}
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <span>{number}</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
