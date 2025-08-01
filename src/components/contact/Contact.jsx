@@ -27,7 +27,7 @@ const Contact = () => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   const mailId=import.meta.env.VITE_MAILID
-  const number=import.meta.env.VITE_NUMBER
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -73,10 +73,10 @@ const Contact = () => {
           <h2>Github</h2>
           <span>Hello street New York</span>
         </motion.div> */}
-        <motion.div className="item" variants={variants}>
+        {/* <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
           <span>{number}</span>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       <div className="formContainer">
         <motion.div
