@@ -71,7 +71,7 @@ const resumeLink=import.meta.env.VITE_RESUME_LINK
 
 <motion.div className="downloadSection" variants={variants}>
   <p>Download My Resume</p>
-  <a href={resumeLink} download className="resume-btn">Download</a>
+  <a href={resumeLink} download target="_blank" rel="noopener noreferrer" className="resume-btn">Download</a>
 </motion.div>
     </motion.div>
   );
