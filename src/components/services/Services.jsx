@@ -41,6 +41,8 @@ const Services = () => {
   { img: githubLogo, label: "GitHub" },
 ];
 
+const resumeLink=import.meta.env.VITE_RESUME_LINK
+
   return (
     <motion.div
       className="services"
@@ -69,7 +71,7 @@ const Services = () => {
 
 <motion.div className="downloadSection" variants={variants}>
   <p>Download My Resume</p>
-  <a href="/Resume.pdf" download className="resume-btn">Download</a>
+  <a href={resumeLink} download className="resume-btn">Download</a>
 </motion.div>
     </motion.div>
   );
