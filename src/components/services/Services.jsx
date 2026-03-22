@@ -10,6 +10,11 @@ import htmlLogo from '../../assets/HTML5.png';
 import cssLogo from '../../assets/CSS3.png';
 import githubLogo from '../../assets/githubLogo.png';
 import tsLogo from '../../assets/typescript.png'
+import nextLogo from '../../assets/Next.js.png'
+import tailwindLogo from '../../assets/Tailwind CSS.png'
+import mysqlLogo from '../../assets/mysql.png'
+
+
 const variants = {
   initial: {
     x: -500,
@@ -35,11 +40,14 @@ const Services = () => {
   { img: reactLogo, label: "React" },
   { img: nodeLogo, label: "Node.js" },
    { img: expressLogo, label: "Express.js" },
-   { img: tsLogo, label: "TypeScript" },
-   { img: jsLogo, label: "JavaScript" },
+    { img: jsLogo, label: "JavaScript" },
     { img: htmlLogo, label: "HTML" },
   { img: cssLogo, label: "CSS" },
+    { img: nextLogo, label: "Next.js" },
+      { img: tailwindLogo, label: "Tailwind CSS" },
+   { img: tsLogo, label: "TypeScript" },
   { img: mongodbLogo, label: "Mongo DB" },
+  { img: mysqlLogo, label: "MySQL" },
   { img: githubLogo, label: "GitHub" },
 ];
 
