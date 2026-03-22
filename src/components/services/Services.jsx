@@ -9,6 +9,7 @@ import jsLogo from '../../assets/JavaScript.png';
 import htmlLogo from '../../assets/HTML5.png';
 import cssLogo from '../../assets/CSS3.png';
 import githubLogo from '../../assets/githubLogo.png';
+import tsLogo from '../../assets/typescript.png'
 const variants = {
   initial: {
     x: -500,
@@ -33,11 +34,12 @@ const Services = () => {
   const techLogos = [
   { img: reactLogo, label: "React" },
   { img: nodeLogo, label: "Node.js" },
-  { img: expressLogo, label: "Express.js" },
-  { img: mongodbLogo, label: "Mongo DB" },
-  { img: jsLogo, label: "JavaScript" },
-  { img: htmlLogo, label: "HTML" },
+   { img: expressLogo, label: "Express.js" },
+   { img: tsLogo, label: "TypeScript" },
+   { img: jsLogo, label: "JavaScript" },
+    { img: htmlLogo, label: "HTML" },
   { img: cssLogo, label: "CSS" },
+  { img: mongodbLogo, label: "Mongo DB" },
   { img: githubLogo, label: "GitHub" },
 ];
 

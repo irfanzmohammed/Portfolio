@@ -4,34 +4,44 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import expenseTracker from '../../assets/expense_tracker.png'
 import netflixGpt from '../../assets/netflix_gpt.png'
 import jobPortal from '../../assets/jsp.png'
+import creatify from '../../assets/creatify.png'
+
 const items = [
   {
     id: 1,
-    title: "Expense Tracker",
-    img: expenseTracker,
-    desc: "A MERN stack web app for tracking income and expenses in real-time, with features for authentication, category-based transaction management, data visualization using Recharts, Excel export, and a responsive user-interface.",
-    link:import.meta.env.VITE_ETRACK_LINK,
+    title: "Creatify - AI Content Platform",
+    img: creatify,
+    desc: "Creatify is an AI-powered content platform that enables creators to generate, edit, and publish media-rich content. It integrates AI-assisted content generation, authentication, and media uploads to provide a modern content management experience.",
+    link:import.meta.env.VITE_CREATIFY_LINK,
   },
-  {
+
+    {
     id: 2,
-    title: "Netflix-GPT",
-    img: netflixGpt,
-    desc: "A movie recommendation web app with a Netflix-style UI, built using React.js and Redux for state management. Integrated Firebase for backend services and hosting, and added GPT-powered search for intelligent movie suggestions.",
-    link:import.meta.env.VITE_NGPT_LINK,
-  },
-  {
-    id: 3,
     title: "Job Seeking Portal",
     img: jobPortal,
-    desc: "A MERN stack job-seeking portal offering personalized job recommendations based on user skills and preferences. Includes REST APIs to support profile creation, job search, and posts about upcoming pool campus drives at nearby colleges.",
+    desc: "The Job Seeking Portal is a full-stack web application that helps users discover job opportunities based on their skills and preferences. It includes features like job search, profile creation, and pool campus drive postings in colleges with filtering and recommendation functionality.",
     link:import.meta.env.VITE_JSP_LINK,
   }, 
-  // {
-  //   id: 4,
-  //   title: "Music App",
-  //   img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  // },
+  
+
+   {
+    id: 3,
+    title: "Expense Tracker",
+    img: expenseTracker,
+    desc:"The Expense Tracker is a full-stack MERN application that allows users to track income and expenses efficiently. It provides secure authentication, interactive data visualization, and excel export features to help users analyze and manage their financial records.",
+    link:import.meta.env.VITE_ETRACK_LINK,
+  },
+
+
+
+    {
+    id: 4,
+    title: "Netflix-GPT",
+    img: netflixGpt,
+    desc: "Netflix-GPT is a movie discovery application inspired by Netflix that helps users explore and search for films using an AI-powered recommendation feature. It combines a responsive interface with GPT-based search to provide intelligent movie suggestions.",
+    link:import.meta.env.VITE_NGPT_LINK,
+  },
+
 ];
 
 const Single = ({ item }) => {
