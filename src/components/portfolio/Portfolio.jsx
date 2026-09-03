@@ -15,31 +15,29 @@ const items = [
     link:import.meta.env.VITE_CREATIFY_LINK,
   },
 
-    {
+     {
     id: 2,
+    title: "Netflix-GPT",
+    img: netflixGpt,
+    desc: "Netflix-GPT is a movie discovery application inspired by Netflix that helps users explore and search for films using an AI-powered recommendation feature. It combines a responsive interface with GPT-based search to provide intelligent movie suggestions.",
+    link:import.meta.env.VITE_NGPT_LINK,
+  },
+
+    {
+    id: 3,
     title: "Job Seeking Portal",
     img: jobPortal,
     desc: "The Job Seeking Portal is a full-stack web application that helps users discover job opportunities based on their skills and preferences. It includes features like job search, profile creation, and pool campus drive postings in colleges with filtering and recommendation functionality.",
     link:import.meta.env.VITE_JSP_LINK,
   }, 
-  
 
+  
    {
-    id: 3,
+    id: 4,
     title: "Expense Tracker",
     img: expenseTracker,
     desc:"The Expense Tracker is a full-stack MERN application that allows users to track income and expenses efficiently. It provides secure authentication, interactive data visualization, and excel export features to help users analyze and manage their financial records.",
     link:import.meta.env.VITE_ETRACK_LINK,
-  },
-
-
-
-    {
-    id: 4,
-    title: "Netflix-GPT",
-    img: netflixGpt,
-    desc: "Netflix-GPT is a movie discovery application inspired by Netflix that helps users explore and search for films using an AI-powered recommendation feature. It combines a responsive interface with GPT-based search to provide intelligent movie suggestions.",
-    link:import.meta.env.VITE_NGPT_LINK,
   },
 
 ];
